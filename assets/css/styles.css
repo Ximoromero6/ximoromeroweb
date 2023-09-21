@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*::-moz-selection {
+  background: #a78295;
+  color: #ffffff;
+}
+*::selection {
+  background: #a78295;
+  color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto Slab", serif;
+}
+body header {
+  border-bottom: 2px solid #331d2c;
+}
+body header .container {
+  width: 1400px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: "row";
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media (max-width: 992px) {
+  body header .container {
+    width: 960px;
+  }
+}
+@media (max-width: 768px) {
+  body header .container {
+    width: 720px;
+  }
+}
+@media (max-width: 576px) {
+  body header .container {
+    width: 540px;
+  }
+}
+body header .container a.logo {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  color: #331d2c;
+}
+body header .container ul.menu {
+  display: flex;
+  flex-direction: "row";
+  justify-content: center;
+  align-items: center;
+  /*    &.closed {
+    display: none;
+  }
+  &.open {
+    display: flex;
+  } */
+}
+body header .container ul.menu li {
+  list-style: none;
+  margin-right: 15px;
+}
+body header .container ul.menu li:nth-child(5) a {
+  border-color: #331d2c;
+}
+body header .container ul.menu li:nth-child(6) a {
+  background-color: #331d2c;
+  color: #ffffff;
+}
+body header .container ul.menu li a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #033844;
+  text-decoration: none;
+  color: #331d2c;
+  padding: 10px 15px;
+  border: 1px solid transparent;
+}
+body header .container ul.menu li:last-child {
+  margin-right: 0;
+}
+body header .container .openMobileMenu {
+  display: none;
+  width: 35px;
+  height: 35px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+body header .container .openMobileMenu i {
+  display: flex;
+  flex-direction: "row";
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+@media (max-width: 900px) {
+  body header .container {
+    position: relative;
+  }
+  body header .container ul.menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 80px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 15px;
+  }
+  body header .container ul.menu li {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 5px;
+  }
+  body header .container ul.menu li a {
+    padding: 10px 0;
+  }
+  body header .container ul.menu li:nth-child(5) a, body header .container ul.menu li:nth-child(6) a {
+    display: block;
+    text-align: center;
+  }
+  body header .container .openMobileMenu {
+    display: flex;
+    flex-direction: "row";
+    justify-content: center;
+    align-items: center;
+  }
+}
+body main section#heroSection .container {
+  width: 1400px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: "row";
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 992px) {
+  body main section#heroSection .container {
+    width: 960px;
+  }
+}
+@media (max-width: 768px) {
+  body main section#heroSection .container {
+    width: 720px;
+  }
+}
+@media (max-width: 576px) {
+  body main section#heroSection .container {
+    width: 540px;
+  }
+}
+body main section#heroSection .container .leftContainer {
+  flex: 1;
+}
+body main section#heroSection .container .leftContainer h1 {
+  font-size: 56px;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.2em;
+}
+@media (max-width: 992px) {
+  body main section#heroSection .container .leftContainer h1 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 768px) {
+  body main section#heroSection .container .leftContainer h1 {
+    font-size: 36px;
+  }
+}
+body main section#heroSection .container .leftContainer p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #033844;
+  margin: 20px 0;
+}
+body main section#heroSection .container .leftContainer .containerCTA {
+  display: flex;
+}
+body main section#heroSection .container .leftContainer .containerCTA #learnMoreButton,
+body main section#heroSection .container .leftContainer .containerCTA #contactMeButton {
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 15px;
+}
+body main section#heroSection .container .leftContainer .containerCTA #learnMoreButton {
+  background-color: #331d2c;
+  color: #ffffff;
+  margin-right: 15px;
+}
+body main section#heroSection .container .leftContainer .containerCTA #contactMeButton {
+  border-color: #331d2c;
+  color: #331d2c;
+}
+body main section#heroSection .container .rightContainer {
+  flex: 1;
+  padding-left: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 500px;
+}
+body main section#heroSection .container .rightContainer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0;
+}
+@media (max-width: 992px) {
+  body main section#heroSection .container .rightContainer {
+    display: none;
+  }
+}/*# sourceMappingURL=styles.css.map */
