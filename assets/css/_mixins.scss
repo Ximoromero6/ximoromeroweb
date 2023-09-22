@@ -27,10 +27,12 @@
   }
 
   @media (max-width: 768px) {
+    @include padding(60px 20px);
     width: $max_width_little;
   }
 
   @media (max-width: 576px) {
+    @include padding(40px 20px);
     width: $max_width_little_extra;
   }
 }

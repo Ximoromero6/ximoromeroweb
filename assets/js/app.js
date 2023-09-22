@@ -24,6 +24,7 @@
     if (isMenuOpen) {
       menu.style.display = "none";
       iconButton.className = "fi fi-br-menu-burger";
+      document.body.style.overflow = "auto";
     } else {
       menu.style.display = "flex";
       iconButton.className = "fi fi-br-cross";
