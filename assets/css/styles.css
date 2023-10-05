@@ -125,10 +125,15 @@ body header .container .openMobileMenu i {
   }
   body header .container ul.menu li {
     width: 100%;
-    padding: 10px 0;
+    /* padding: 10px 0; */
     margin-bottom: 5px;
   }
   body header .container ul.menu li a {
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+  }
+  body header .container ul.menu li:nth-child(5), body header .container ul.menu li:nth-child(6) {
     padding: 10px 0;
   }
   body header .container ul.menu li:nth-child(5) a, body header .container ul.menu li:nth-child(6) a {
