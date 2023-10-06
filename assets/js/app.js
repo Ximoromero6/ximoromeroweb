@@ -14,7 +14,7 @@
       menu.style.display = "flex";
     } else {
       menu.style.display = "none";
-      iconButton.className = "fi fi-br-menu-burger";
+      iconButton.className = "fi fi-br-bars-staggered";
     }
   });
 
@@ -23,7 +23,7 @@
 
     if (isMenuOpen) {
       menu.style.display = "none";
-      iconButton.className = "fi fi-br-menu-burger";
+      iconButton.className = "fi fi-br-bars-staggered";
       document.body.style.overflow = "auto";
     } else {
       menu.style.display = "flex";
