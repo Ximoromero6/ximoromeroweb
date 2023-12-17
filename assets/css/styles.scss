@@ -345,6 +345,12 @@ body {
         }
       }
     }
+
+    @media (max-width: 768px) {
+      ul.footerList > li > a > p {
+        display: none;
+      }
+    }
   }
 }
 

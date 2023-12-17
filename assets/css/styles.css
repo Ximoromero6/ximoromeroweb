@@ -485,6 +485,11 @@ body footer .container .containerRights p {
   font-size: 14px;
   color: #331d2c;
 }
+@media (max-width: 768px) {
+  body footer ul.footerList > li > a > p {
+    display: none;
+  }
+}
 
 @keyframes glowing-button-85 {
   0% {
