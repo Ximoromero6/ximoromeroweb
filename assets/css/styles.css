@@ -13,6 +13,11 @@
   background: #a78295;
   color: #ffffff;
 }
+*:focus {
+  outline-width: 2px;
+  outline-style: dashed;
+  outline-color: #331d2c;
+}
 
 html {
   scroll-behavior: smooth;
@@ -30,7 +35,7 @@ body header .container {
   margin: 0 auto;
   padding: 80px 20px;
   display: flex;
-  flex-direction: "row";
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding-top: 20px;
@@ -61,7 +66,7 @@ body header .container a.logo {
 }
 body header .container ul.menu {
   display: flex;
-  flex-direction: "row";
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -95,7 +100,7 @@ body header .container .openMobileMenu {
 }
 body header .container .openMobileMenu i {
   display: flex;
-  flex-direction: "row";
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   font-size: 16px;
@@ -138,7 +143,7 @@ body header .container .openMobileMenu i {
   }
   body header .container .openMobileMenu {
     display: flex;
-    flex-direction: "row";
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
@@ -149,7 +154,7 @@ body main section#heroSection .container {
   margin: 0 auto;
   padding: 80px 20px;
   display: flex;
-  flex-direction: "row";
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -259,7 +264,7 @@ body main section#howItWorks .container {
 }
 body main section#howItWorks .container ul.listHIW {
   display: flex;
-  flex-direction: "row";
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -273,7 +278,7 @@ body main section#howItWorks .container ul.listHIW li i {
   margin-bottom: 15px;
   color: #331d2c;
   display: flex;
-  flex-direction: "row";
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
@@ -378,7 +383,7 @@ body main section#stunningWebs .container ul li .bottom a {
   font-size: 16px;
   text-align: left;
   display: flex;
-  flex-direction: "row";
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
@@ -388,7 +393,7 @@ body main section#stunningWebs .container ul li .bottom a p {
 }
 body main section#stunningWebs .container ul li .bottom a i {
   display: flex;
-  flex-direction: "row";
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   font-size: 12px;
@@ -445,33 +450,33 @@ body footer .container .logo {
   margin-bottom: 30px;
   font-weight: 700;
 }
-body footer .container ul {
+body footer .container ul.footerList {
   display: flex;
-  flex-direction: "row";
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-body footer .container ul li {
+body footer .container ul.footerList li {
   list-style: none;
   margin: 0 10px;
 }
-body footer .container ul li a {
+body footer .container ul.footerList li a {
   text-decoration: none;
   color: #331d2c;
   text-align: center;
+  gap: 10px;
   display: flex;
-  flex-direction: "row";
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-body footer .container ul li a i {
+body footer .container ul.footerList li a i {
   display: flex;
-  flex-direction: "row";
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-right: 5px;
 }
-body footer .container ul li a:hover > p {
+body footer .container ul.footerList li a:hover > p {
   text-decoration: underline;
 }
 body footer .container hr {

@@ -10,6 +10,11 @@
     background: #a78295;
     color: $white;
   }
+  &:focus {
+    outline-width: 2px;
+    outline-style: dashed;
+    outline-color: #331d2c;
+  }
 }
 
 html {
@@ -311,7 +316,7 @@ body {
         margin-bottom: 30px;
         font-weight: 700;
       }
-      ul {
+      ul.footerList {
         @include flex(center, center);
         li {
           list-style: none;
@@ -320,10 +325,10 @@ body {
             text-decoration: none;
             color: #331d2c;
             text-align: center;
+            gap: 10px;
             @include flex(center, center);
             i {
               @include flex(center, center);
-              margin-right: 5px;
             }
             &:hover > p {
               text-decoration: underline;

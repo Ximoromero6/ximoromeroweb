@@ -1,0 +1,23 @@
+
+<FilesMatch "\.(js|css|ico|pdf|jpg|jpeg|png|gif)$">
+Header set Cache-Control "public"
+Header set Expires "Thu, 15 Apr 2026 20:00:00 GMT"
+Header unset Last-Modified
+</FilesMatch>
+
+RewriteEngine on
+Options +FollowSymlinks -MultiViews
+
+# to redirect my.site.com to my.site.com/index.html
+RewriteRule ^$ /index.html [R,L]
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+SetOutputFilter DEFLATE
+Header unset ETag
+FileETag None
+
+# to redirect /dir1/dir2 to index.html?url=dir1/dir2
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond  %{QUERY_STRING} !^url=
+RewriteRule ^([^/]+)/([^/]+)/?$ /index.html?url=$1/$2 [R,L,QSA]
