@@ -1,7 +1,7 @@
 (function () {
   const openMobileMenuButton = document.querySelector(".openMobileMenu");
   const menu = document.querySelector("ul.menu");
-  let iconButton = document.querySelector(".openMobileMenu > i");
+  const iconButton = document.querySelector(".openMobileMenu > i");
   const width =
     window.innerWidth ||
     document.documentElement.clientWidth ||
@@ -24,11 +24,11 @@
     if (isMenuOpen) {
       menu.style.display = "none";
       iconButton.className = "fi fi-br-bars-staggered";
-      document.body.style.overflow = "auto";
+     /*  document.body.style.overflow = "auto"; */
     } else {
       menu.style.display = "flex";
       iconButton.className = "fi fi-br-cross";
-      document.body.style.overflow = "hidden";
+      /* document.body.style.overflow = "hidden"; */
     }
   });
 })();

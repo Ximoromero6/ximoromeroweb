@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css");
 * {
   padding: 0;
@@ -24,7 +25,8 @@ html {
 }
 
 body {
-  font-family: "Roboto Slab", serif;
+  /*  font-family: "Roboto Slab", serif; */
+  font-family: "Poppins", sans-serif;
 }
 body header {
   border-bottom: 2px solid #331d2c;
@@ -124,13 +126,13 @@ body header .container .openMobileMenu i {
     align-items: flex-start;
     justify-content: flex-start;
     padding: 15px;
+    gap: 5px;
   }
   body header .container ul.menu li {
     width: 100%;
-    margin-bottom: 5px;
   }
   body header .container ul.menu li a {
-    padding: 10px 0;
+    padding: 10px;
     width: 100%;
     display: flex;
   }
@@ -149,40 +151,38 @@ body header .container .openMobileMenu i {
   }
 }
 body main section#heroSection .container {
+  padding-bottom: 80px;
+}
+body main section#heroSection .container .leftContainer {
   width: 1400px;
   max-width: 100%;
   margin: 0 auto;
   padding: 80px 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 @media (max-width: 992px) {
-  body main section#heroSection .container {
+  body main section#heroSection .container .leftContainer {
     width: 960px;
   }
 }
 @media (max-width: 768px) {
-  body main section#heroSection .container {
+  body main section#heroSection .container .leftContainer {
     padding: 60px 20px;
     width: 720px;
   }
 }
 @media (max-width: 576px) {
-  body main section#heroSection .container {
+  body main section#heroSection .container .leftContainer {
     padding: 40px 20px;
     width: 540px;
   }
 }
-body main section#heroSection .container .leftContainer {
-  flex: 1;
-}
 body main section#heroSection .container .leftContainer h1 {
+  text-align: center;
   font-size: 56px;
   font-weight: 700;
-  color: #000000;
+  color: #331d2c;
   line-height: 1.2em;
+  font-size: 86px;
 }
 @media (max-width: 992px) {
   body main section#heroSection .container .leftContainer h1 {
@@ -194,14 +194,25 @@ body main section#heroSection .container .leftContainer h1 {
     font-size: 36px;
   }
 }
+body main section#heroSection .container .leftContainer h1 .textLine {
+  color: transparent;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: dash 5s linear forwards;
+  fill-opacity: 0;
+}
 body main section#heroSection .container .leftContainer p {
   font-size: 16px;
   font-weight: 500;
   color: #033844;
-  margin: 20px 0;
+  margin: 20px auto;
+  text-align: center;
+  max-width: 60%;
 }
 body main section#heroSection .container .leftContainer .containerCTA {
   display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 body main section#heroSection .container .leftContainer .containerCTA #learnMoreButton,
 body main section#heroSection .container .leftContainer .containerCTA #contactMeButton {
@@ -214,93 +225,147 @@ body main section#heroSection .container .leftContainer .containerCTA #contactMe
 body main section#heroSection .container .leftContainer .containerCTA #learnMoreButton {
   background-color: #331d2c;
   color: #ffffff;
-  margin-right: 15px;
 }
 body main section#heroSection .container .leftContainer .containerCTA #contactMeButton {
   border-color: #331d2c;
   color: #331d2c;
 }
 body main section#heroSection .container .rightContainer {
-  flex: 1;
-  padding-left: 110px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-end;
-  height: 500px;
+  gap: 5px;
 }
-body main section#heroSection .container .rightContainer img {
+body main section#heroSection .container .rightContainer .topRow,
+body main section#heroSection .container .rightContainer .bottomRow {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  gap: 5px;
+}
+body main section#heroSection .container .rightContainer .topRow img,
+body main section#heroSection .container .rightContainer .bottomRow img {
+  max-width: 350px;
+  aspect-ratio: 16/9;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 0;
-  border-radius: 3px;
-}
-body main section#howItWorks {
+  height: 300px;
   background-color: #eee;
 }
-body main section#howItWorks .container {
+body main section#aboutMe .container {
   width: 1400px;
   max-width: 100%;
   margin: 0 auto;
   padding: 80px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 992px) {
-  body main section#howItWorks .container {
+  body main section#aboutMe .container {
     width: 960px;
   }
 }
 @media (max-width: 768px) {
-  body main section#howItWorks .container {
+  body main section#aboutMe .container {
     padding: 60px 20px;
     width: 720px;
   }
 }
 @media (max-width: 576px) {
-  body main section#howItWorks .container {
+  body main section#aboutMe .container {
     padding: 40px 20px;
     width: 540px;
   }
 }
-body main section#howItWorks .container ul.listHIW {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+body main section#aboutMe .container .containerAvatar {
+  flex: 1;
+  margin: auto;
+  position: relative;
 }
-body main section#howItWorks .container ul.listHIW li {
-  list-style: none;
-  max-width: 400px;
-  margin: 0 20px;
+body main section#aboutMe .container .containerAvatar img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0;
+  aspect-ratio: 1/1;
+  max-width: 550px;
 }
-body main section#howItWorks .container ul.listHIW li i {
-  font-size: 25px;
-  margin-bottom: 15px;
+body main section#aboutMe .container .containerInformation {
+  flex: 1;
+  padding: 40px;
+  margin-left: 50px;
+}
+body main section#aboutMe .container .containerInformation p.preTitle {
+  margin-bottom: 10px;
+  color: #6a6869;
+  font-weight: 500;
+}
+body main section#aboutMe .container .containerInformation h2.title {
+  font-size: 56px;
+  font-weight: 700;
   color: #331d2c;
+  line-height: 1.2em;
+  margin-bottom: 30px;
+}
+@media (max-width: 992px) {
+  body main section#aboutMe .container .containerInformation h2.title {
+    font-size: 50px;
+  }
+}
+@media (max-width: 768px) {
+  body main section#aboutMe .container .containerInformation h2.title {
+    font-size: 36px;
+  }
+}
+body main section#aboutMe .container .containerInformation p.description {
+  font-size: 16px;
+  font-weight: 500;
+  color: #033844;
+  text-align: justify;
+}
+body main section#aboutMe .container .containerInformation p.description span {
+  display: block;
+  margin-top: 10px;
+}
+body main section#aboutMe .container .containerInformation ul.containerSocial {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  gap: 5px;
+  margin-top: 20px;
 }
-body main section#howItWorks .container ul.listHIW li h2 {
-  font-weight: 700;
-  color: #331d2c;
-  line-height: 1.168em;
-  font-size: 24px;
-  margin-bottom: 10px;
+body main section#aboutMe .container .containerInformation ul.containerSocial li {
+  list-style: none;
 }
-body main section#howItWorks .container ul.listHIW li p {
-  margin-bottom: 25px;
-  font-size: 16px;
-}
-body main section#howItWorks .container ul.listHIW li a {
-  font-family: inherit;
-  font-size: 16px;
+body main section#aboutMe .container .containerInformation ul.containerSocial li a {
   text-decoration: none;
   color: #331d2c;
-  border: 1px solid #331d2c;
-  padding: 10px 20px;
-  display: inline-block;
+  text-align: center;
+  gap: 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body main section#aboutMe .container .containerInformation ul.containerSocial li a i {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body main section#aboutMe .container .containerInformation ul.containerSocial li a:hover > p {
+  text-decoration: underline;
 }
 body main section#stunningWebs .container {
   width: 1400px;
@@ -400,22 +465,19 @@ body main section#stunningWebs .container ul li .bottom a i {
 }
 @media (max-width: 992px) {
   body main section#heroSection .container {
-    flex-direction: column;
+    padding-bottom: 40px;
   }
-  body main section#heroSection .container .rightContainer {
-    padding-left: 0;
-    margin-top: 20px;
+  body main section#heroSection .container .leftContainer p {
+    max-width: none;
   }
-  body main section#howItWorks .container ul.listHIW {
+  body main section#aboutMe .container {
     flex-direction: column;
     align-items: flex-start;
   }
-  body main section#howItWorks .container ul.listHIW li {
-    max-width: none;
-    margin: 20px 0;
-  }
-  body main section#howItWorks .container ul.listHIW li i {
-    font-size: 20px;
+  body main section#aboutMe .container .containerInformation {
+    margin-left: 0;
+    padding: 0;
+    margin-top: 10px;
   }
 }
 body footer .container {
@@ -458,13 +520,14 @@ body footer .container ul.footerList {
 }
 body footer .container ul.footerList li {
   list-style: none;
-  margin: 0 10px;
+  margin: 0 5px;
 }
 body footer .container ul.footerList li a {
   text-decoration: none;
   color: #331d2c;
   text-align: center;
   gap: 10px;
+  padding: 0 5px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -496,14 +559,18 @@ body footer .container .containerRights p {
   }
 }
 
-@keyframes glowing-button-85 {
-  0% {
-    background-position: 0 0;
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
   }
-  50% {
-    background-position: 400% 0;
+}
+@keyframes filling {
+  0%, 90% {
+    fill: #331d2c;
+    fill-opacity: 0;
   }
   100% {
-    background-position: 0 0;
+    fill: #331d2c;
+    fill-opacity: 1;
   }
 }/*# sourceMappingURL=styles.css.map */
