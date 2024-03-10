@@ -32,17 +32,20 @@ body {
       padding-bottom: 20px;
       a.logo {
         text-decoration: none;
-        font-weight: bold;
+        font-weight: 600;
         font-size: 20px;
         color: #331d2c;
+        padding: 0 5px;
       }
       ul.menu {
         @include flex(center, center);
+        gap: 15px;
         li {
           list-style: none;
           &:nth-child(4) a {
             background-color: #331d2c;
             color: #fff;
+            font-weight: normal;
           }
           a {
             @include p;
@@ -50,11 +53,7 @@ body {
             color: #331d2c;
             @include padding(10px 15px);
             border: 1px solid transparent;
-          }
-          margin-right: 15px;
-
-          &:last-child {
-            margin-right: 0;
+            border-radius: 6px;
           }
         }
       }
@@ -118,19 +117,16 @@ body {
   main {
     section#heroSection {
       .container {
-        padding-bottom: 80px;
+        @include container;
         .leftContainer {
-          @include container;
+          padding-bottom: 80px;
           h1 {
             text-align: center;
             @include h1(#331d2c);
             font-size: 86px;
-            .textLine {
-              color: transparent;
-              stroke-dasharray: 500;
-              stroke-dashoffset: 500;
-              animation: dash 5s linear forwards;
-              fill-opacity: 0;
+            span {
+              -webkit-text-stroke: 2px #331d2c;
+              -webkit-text-fill-color: transparent;
             }
           }
           p {
@@ -150,6 +146,7 @@ body {
               text-decoration: none;
               font-family: inherit;
               font-size: 15px;
+              border-radius: 6px;
             }
             #learnMoreButton {
               background-color: #331d2c;
@@ -162,26 +159,12 @@ body {
           }
         }
         .rightContainer {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          gap: 5px;
-          .topRow,
-          .bottomRow {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            gap: 5px;
-            img {
-              max-width: 350px;
-              aspect-ratio: 16 / 9;
-              @include image(100%, 100%);
-              height: 300px;
-              background-color: #eee;
-            }
+          position: relative;
+          img {
+            aspect-ratio: 16 / 9;
+            @include image(100%, 100%);
+            background-color: #eee;
+            border-radius: 6px;
           }
         }
       }
@@ -199,6 +182,7 @@ body {
             @include image(100%, 100%);
             aspect-ratio: 1/1;
             max-width: 550px;
+            border-radius: 6px;
           }
         }
         .containerInformation {
@@ -206,9 +190,9 @@ body {
           padding: 40px;
           margin-left: 50px;
           p.preTitle {
-            margin-bottom: 10px;
-            color: #6a6869;
-            font-weight: 500;
+            font-style: italic;
+            margin-bottom: 15px;
+            font-size: 15px;
           }
           h2.title {
             @include h1(#331d2c);
@@ -235,6 +219,7 @@ body {
                 gap: 10px;
                 padding: 5px;
                 @include flex(center, center);
+                border-radius: 6px;
                 i {
                   @include flex(center, center);
                 }
@@ -323,6 +308,11 @@ body {
         .container {
           padding-bottom: 40px;
           .leftContainer {
+            h1 {
+              span {
+                -webkit-text-stroke-width: 1px;
+              }
+            }
             p {
               max-width: none;
             }
@@ -333,6 +323,9 @@ body {
         .container {
           flex-direction: column;
           align-items: flex-start;
+          .containerAvatar {
+            margin: 0;
+          }
           .containerInformation {
             margin-left: 0;
             padding: 0;
@@ -367,6 +360,7 @@ body {
             gap: 10px;
             padding: 0 5px;
             @include flex(center, center);
+            border-radius: 6px;
             i {
               @include flex(center, center);
             }

@@ -62,23 +62,25 @@ body header .container {
 }
 body header .container a.logo {
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 20px;
   color: #331d2c;
+  padding: 0 5px;
 }
 body header .container ul.menu {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 15px;
 }
 body header .container ul.menu li {
   list-style: none;
-  margin-right: 15px;
 }
 body header .container ul.menu li:nth-child(4) a {
   background-color: #331d2c;
   color: #fff;
+  font-weight: normal;
 }
 body header .container ul.menu li a {
   font-size: 16px;
@@ -88,9 +90,7 @@ body header .container ul.menu li a {
   color: #331d2c;
   padding: 10px 15px;
   border: 1px solid transparent;
-}
-body header .container ul.menu li:last-child {
-  margin-right: 0;
+  border-radius: 6px;
 }
 body header .container .openMobileMenu {
   display: none;
@@ -151,30 +151,30 @@ body header .container .openMobileMenu i {
   }
 }
 body main section#heroSection .container {
-  padding-bottom: 80px;
-}
-body main section#heroSection .container .leftContainer {
   width: 1400px;
   max-width: 100%;
   margin: 0 auto;
   padding: 80px 20px;
 }
 @media (max-width: 992px) {
-  body main section#heroSection .container .leftContainer {
+  body main section#heroSection .container {
     width: 960px;
   }
 }
 @media (max-width: 768px) {
-  body main section#heroSection .container .leftContainer {
+  body main section#heroSection .container {
     padding: 60px 20px;
     width: 720px;
   }
 }
 @media (max-width: 576px) {
-  body main section#heroSection .container .leftContainer {
+  body main section#heroSection .container {
     padding: 40px 20px;
     width: 540px;
   }
+}
+body main section#heroSection .container .leftContainer {
+  padding-bottom: 80px;
 }
 body main section#heroSection .container .leftContainer h1 {
   text-align: center;
@@ -194,12 +194,9 @@ body main section#heroSection .container .leftContainer h1 {
     font-size: 36px;
   }
 }
-body main section#heroSection .container .leftContainer h1 .textLine {
-  color: transparent;
-  stroke-dasharray: 500;
-  stroke-dashoffset: 500;
-  animation: dash 5s linear forwards;
-  fill-opacity: 0;
+body main section#heroSection .container .leftContainer h1 span {
+  -webkit-text-stroke: 2px #331d2c;
+  -webkit-text-fill-color: transparent;
 }
 body main section#heroSection .container .leftContainer p {
   font-size: 16px;
@@ -221,6 +218,7 @@ body main section#heroSection .container .leftContainer .containerCTA #contactMe
   text-decoration: none;
   font-family: inherit;
   font-size: 15px;
+  border-radius: 6px;
 }
 body main section#heroSection .container .leftContainer .containerCTA #learnMoreButton {
   background-color: #331d2c;
@@ -231,32 +229,17 @@ body main section#heroSection .container .leftContainer .containerCTA #contactMe
   color: #331d2c;
 }
 body main section#heroSection .container .rightContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
+  position: relative;
 }
-body main section#heroSection .container .rightContainer .topRow,
-body main section#heroSection .container .rightContainer .bottomRow {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  gap: 5px;
-}
-body main section#heroSection .container .rightContainer .topRow img,
-body main section#heroSection .container .rightContainer .bottomRow img {
-  max-width: 350px;
+body main section#heroSection .container .rightContainer img {
   aspect-ratio: 16/9;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 0;
-  height: 300px;
   background-color: #eee;
+  border-radius: 6px;
 }
 body main section#aboutMe .container {
   width: 1400px;
@@ -298,6 +281,7 @@ body main section#aboutMe .container .containerAvatar img {
   border-radius: 0;
   aspect-ratio: 1/1;
   max-width: 550px;
+  border-radius: 6px;
 }
 body main section#aboutMe .container .containerInformation {
   flex: 1;
@@ -305,9 +289,9 @@ body main section#aboutMe .container .containerInformation {
   margin-left: 50px;
 }
 body main section#aboutMe .container .containerInformation p.preTitle {
-  margin-bottom: 10px;
-  color: #6a6869;
-  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 15px;
+  font-size: 15px;
 }
 body main section#aboutMe .container .containerInformation h2.title {
   font-size: 56px;
@@ -357,6 +341,7 @@ body main section#aboutMe .container .containerInformation ul.containerSocial li
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  border-radius: 6px;
 }
 body main section#aboutMe .container .containerInformation ul.containerSocial li a i {
   display: flex;
@@ -467,12 +452,18 @@ body main section#stunningWebs .container ul li .bottom a i {
   body main section#heroSection .container {
     padding-bottom: 40px;
   }
+  body main section#heroSection .container .leftContainer h1 span {
+    -webkit-text-stroke-width: 1px;
+  }
   body main section#heroSection .container .leftContainer p {
     max-width: none;
   }
   body main section#aboutMe .container {
     flex-direction: column;
     align-items: flex-start;
+  }
+  body main section#aboutMe .container .containerAvatar {
+    margin: 0;
   }
   body main section#aboutMe .container .containerInformation {
     margin-left: 0;
@@ -532,6 +523,7 @@ body footer .container ul.footerList li a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  border-radius: 6px;
 }
 body footer .container ul.footerList li a i {
   display: flex;
